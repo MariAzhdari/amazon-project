@@ -8,25 +8,25 @@ function Header(){
     return (
       <div className="header">
         <div className="header_logo">
-          <StorefrontIcon className="header-logoImage" fontSize="large" />
-          <h2>eShop</h2>
+          <StorefrontIcon className="header_logoImage" fontSize="large" />
+          <h2 className="header_logoTitle">eShop</h2>
         </div>
         <div className="header_search">
           <input type="text" className="header_searchInput" />
-          <SearchIcon className="heater_searchIcon" />
+          <SearchIcon className="header_searchIcon" />
         </div>
         <div className="header_nav">
-          <div className="nav-item">
+          <div className="nav_item">
             <span className="nav_itemLineOne">Hello Guest</span>
             <span className="nav_itemLineTwo">Sing in</span>
           </div>
-          <div className="nav-item">
+          <div className="nav_item">
             <span className="nav_itemLineOne">Your</span>
             <span className="nav_itemLineTwo">Shop</span>
           </div>
-          <div className="nav-item">
-            <ShoppingBasketIcon fontSize="large" className="itemBasket" />
-            <span className="nav_itemLineTwo nav_basketCount">0</span>
+          <div className="nav_item">
+            <ShoppingBasketIcon  className="itemBasket" />
+            <span className="nav_itemLineTwo     nav_basketCount">0</span>
           </div>
         </div>
       </div>

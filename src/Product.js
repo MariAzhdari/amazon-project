@@ -8,7 +8,7 @@ function Product(){
             <div className="product_info">
                 <p>Title</p>
                 <p className="product_price">£30</p>
-                <div className="product_rating"></div>
+                <div className="product_rating">⭐⭐</div>
             </div>
          </div>
         </div>

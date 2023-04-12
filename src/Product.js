@@ -3,7 +3,6 @@ import "./Product.css";
 
 function Product({id,title,image,price,rating}){
     return (
-      <div>
         <div className="product">
           <div className="product_info">
             <p>{title}</p>
@@ -19,7 +18,6 @@ function Product({id,title,image,price,rating}){
           />
           <button>add to basket</button>
         </div>
-      </div>
     );
 }
 

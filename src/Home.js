@@ -1,66 +1,69 @@
-import React from "react";
 import "./Home.css";
 import Product from "./Product";
+function Home() {
+  return (
+    <div>
+      <div className="home-container">
+        <img
+          src="https://www.x-cart.com/img/16591/ecommerce-p800.jpg"
+          alt=""
+          className="home-image"
+        />
 
-function Home(){
-    return (
-      <div className="home">
-        <div className="home_container">
-          <img
-            src="https://media.istockphoto.com/id/1433595738/photo/close-up-shopping-trolley-on-laptop-and-small-boxes-inside.jpg?s=612x612&w=0&k=20&c=Tmc4g73pW7nWunGhHLFyyMpTYBdTwESfRKCLj04x5fc="
-            alt=""
-            className="home_image"
-          />
-        </div>
-        <div className="home_row">
+        <div className="home-product-row">
           <Product
-            id="1"
-            title="WOMEN'S HANDBAGS"
-            price={22}
-            rating={4}
-            image="https://media.istockphoto.com/id/1014076920/photo/luxury-white-leather-female-bag.jpg?s=612x612&w=0&k=20&c=ARsYnN1fqn2eQVAjT4TprPlTE6OpF3EJCY84oloASbU="
-          />
-          <Product
-            id="2"
-            title="truing shoes"
-            price={102}
-            rating={3}
-            image="https://media.istockphoto.com/id/1337191336/photo/black-fashion-sport-shoe-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=DAsn_Qj_gjJ42BDr33CU10QO3ckCMD93KFyuP7qrvN8="
-          />
-        </div>
-        <div className="home_row">
-          <Product
-            id="3"
-            title="MC Book"
-            price={1800}
+            id="12321341"
+            title="Bennett Mystic 15.6 inch Laptop Shoulder Messenger Sling Office Bag, Water Repellent Fabric for Men and Women (Blue"
+            price={11.96}
             rating={5}
-            image="https://images.unsplash.com/photo-1575024357670-2b5164f470c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGxhcHRvcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            image="https://images-na.ssl-images-amazon.com/images/I/71mEsHyzSCL._SL1000_.jpg"
           />
+
           <Product
-            id="4"
-            title="Bike "
-            price={1300}
-            rating={3}
-            image="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlrZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
-          />
-          <Product
-            id="5"
-            title="Toaster "
-            price={220}
+            id="49538094"
+            title="IFB 30 L Convection Microwave Oven (30BRC2, Black, With Starter Kit)"
+            price={239.0}
             rating={4}
-            image="https://media.istockphoto.com/id/512747842/photo/toster-on-white-background.jpg?b=1&s=170667a&w=0&k=20&c=xnhzQmV_a-wS1XY8n0FKjVP5QLLpT5UMLAyeEGd5fQs="
+            image="https://images-na.ssl-images-amazon.com/images/I/81D8pNFmWzL._SL1500_.jpg"
           />
         </div>
-        <div className="home_row">
+
+        <div className="home-product-row">
           <Product
-            id="6"
-            title="sun glasses"
-            price={340}
+            id="4903850"
+            title="All the Light we Cannot See: The Breathtaking World Wide Bestseller Paperback"
+            price={199.99}
+            rating={3}
+            image="https://images-eu.ssl-images-amazon.com/images/I/514kNkerQ0L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg"
+          />
+          <Product
+            id="23445930"
+            title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
+            price={98.99}
+            rating={5}
+            image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+          />
+          <Product
+            id="3254354345"
+            title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+            price={598.99}
             rating={4}
-            image="https://images.unsplash.com/photo-1567473810954-507d59716c25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3VuJTIwZ2xhc3Nlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+            image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+          />
+        </div>
+
+        <div className="home-product-row">
+          <Product
+            id="90829332"
+            title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
+            price={1094.98}
+            rating={4}
+            image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
           />
         </div>
       </div>
-    );
+    </div>
+  );
 }
+
 export default Home;

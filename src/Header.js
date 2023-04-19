@@ -1,41 +1,53 @@
-import React from "react";
-import "./Header.css";
-import { Link } from "react-router-dom";
-import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import React, { useContext } from "react";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import SearchIcon from "@mui/icons-material/Search";
- 
-function Header(){
-    return (
-      <div className="header">
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <div className="header_logo">
-            <StorefrontIcon className="header_logoImage" fontSize="large" />
-            <h2 className="header_logoTitle">eShop</h2>
-          </div>
-        </Link>
-        <div className="header_search">
-          <input type="text" className="header_searchInput" />
-          <SearchIcon className="header_searchIcon" />
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import "./Header.css";
+import { Link } from "react-router-dom";
+import { AppContext } from "./App";
+
+function Header() {
+  const { basket } = useContext(AppContext);
+
+  const totalQuantity = basket.reduce(
+    (total, item) => total + item.quantity,
+    0
+  );
+
+  return (
+    <div className="header">
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <div className="header_logo">
+          <StorefrontIcon className="header_logoImage" fontSize="large" />
+          <h2 className="header_logoTitle">eSHOP</h2>
         </div>
-        <div className="header_nav">
+      </Link>
+      <div className="header_search">
+        <input type="text" className="header_searchInput" />
+        <SearchIcon className="header_searchIcon" />
+      </div>
+      <div className="nav">
+        <Link to="./login" style={{ textDecoration: "none" }}>
           <div className="nav_item">
             <span className="nav_itemLineOne">Hello Guest</span>
-            <span className="nav_itemLineTwo">Sing in</span>
+            <span className="nav_itemLineTwo">Sign In</span>
           </div>
-          <div className="nav_item">
-            <span className="nav_itemLineOne">Your</span>
-            <span className="nav_itemLineTwo">Shop</span>
-          </div>
-          <Link to="/Checkout" style={{ textDecoration: "none" }}>
-            <div className="itemBasket">
-              <ShoppingBasketIcon />
-              <span className="nav_itemLineTwo   nav_basketCount">0</span>
-            </div>
-          </Link>
+        </Link>
+        <div className="nav_item">
+          <span className="nav_itemLineOne">Your</span>
+          <span className="nav_itemLineTwo">Shop</span>
         </div>
+        <Link to="./checkout" style={{ textDecoration: "none" }}>
+          <div className="itemBasket">
+            <ShoppingBasketIcon />
+            <span className="nav_itemLineTwo nav_basketCount">
+              {totalQuantity}
+            </span>
+          </div>
+        </Link>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Header;
